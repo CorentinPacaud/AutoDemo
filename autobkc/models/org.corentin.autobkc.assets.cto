@@ -1,0 +1,26 @@
+/*********************************************************** */
+/**                        ASSETS                            */
+/*********************************************************** */
+// Corentin PACAUD
+
+namespace org.corentin.autobkc.assets
+
+import org.corentin.autobkc.participants.Owner
+import org.corentin.autobkc.participants.Buyer
+import org.corentin.autobkc.participants.Seller
+
+asset Car identified by carId {
+  o String carId
+  o String brand
+  o String model
+  --> Owner owner
+}
+
+asset Sale identified by saleId{
+  o String saleId
+  --> Buyer buyer
+  --> Seller seller
+  --> Car car
+  o Integer price
+  o String status
+}

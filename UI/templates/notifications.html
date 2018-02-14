@@ -1,0 +1,59 @@
+<div ng-controller="NotificationController">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="header">
+                    <h4 class="title"></h4>
+                    <p class="category"></p>
+                </div>
+
+                <div class="content">
+                    <div class="pretty-table">
+                        <table class="table-fill" ng-if="undefined != acks && acks.length > 0">
+                            <thead>
+                                <th style="font-size:10px;">Contract Id</th>
+                                <th style="font-size:10px;">Risk Carrier</th>
+                                <th style="font-size:10px;">Status</th>                       
+                                <th style="font-size:10px;">Acknowledgement Date</th>
+                                <th style="font-size:10px;"></th>
+                            </thead>
+                            <tbody ng-repeat="item in acks">
+                                <tr style="cursor:pointer;font-size:11px;" ng-click="">
+                                    <td>{{item.contractId}}</td>
+                                    <td>{{item.riskCarrierName}}</td>
+                                    <td>{{item.acknowledged == 1 ? 'Acknowledged' : 'Pending'}}</td>
+                                    <td>{{item.acknowledged == 1 ? item.acknowledgeDate : 'N/A'}}</td>
+                                    <td style="text-align:center;">
+                                        <button class="btn btn-primary btn-fill" data-ng-click="gotoContract(item.contractId)">View Contract</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                        <table class="table-fill" ng-if="undefined == acks || acks.length == 0">
+                            <thead>
+                                <th style="font-size:10px;">Contract Id</th>
+                                <th style="font-size:10px;">Risk Carrier</th>
+                                <th style="font-size:10px;">Status</th>                       
+                                <th style="font-size:10px;">Acknowledgement Date</th>
+                                <th style="font-size:10px;"></th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="6" width="100%" align="center" style="text-align:center">
+                                        <center>No Notification found</center>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                    </div>
+                </div>
+            </div>
+            <br/>
+        </div>
+    </div>
+    
+
+</div>

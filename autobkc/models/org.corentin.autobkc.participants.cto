@@ -1,0 +1,19 @@
+/*********************************************************** */
+/**                    PARTICIPANTS                          */
+/*********************************************************** */
+// Corentin PACAUD
+
+namespace org.corentin.autobkc.participants
+
+abstract participant Owner identified by ownerId {
+  o String ownerId
+}
+
+participant Seller extends Owner{
+  o String companyName
+}
+
+participant Buyer extends Owner {
+  o String firstname
+  o String lastname
+}

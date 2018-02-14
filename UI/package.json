@@ -1,0 +1,17 @@
+{
+  "name": "vote-api-admin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "angular-bootstrap-datetimepicker": "^1.1.4",
+    "angular-chart.js": "^1.1.1",
+    "moment": "^2.18.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

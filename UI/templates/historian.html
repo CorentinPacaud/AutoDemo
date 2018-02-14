@@ -1,0 +1,31 @@
+<div ng-controller="HistorianController">
+
+    <div class="pretty-table">
+        <table class="table-fill">
+            <thead>
+                <th style='font-size:11px'>Transaction Id</th>
+                <th style='font-size:11px'>Timestamp</th>
+                <th style='font-size:11px'>Participant</th>
+                <th style='font-size:11px'>Rôle</th>
+                <th style='font-size:11px'>Tx Type</th>
+                <th style='font-size:11px'></th>
+            </thead>
+            <tbody ng-repeat="item in history">
+                <tr>
+                    <td style='font-size:10px'>{{item.txId}}</td>
+                    <td style='font-size:10px'>{{item.timestamp | date:'dd/MM/yyyy HH:mm'}}</td>
+                    <td style='font-size:10px'>{{item.participant}}
+                        <br/>
+                        <span style='font-size:9px'>{{item.participantId}}</span>
+                    </td>
+                    <td style='font-size:10px'>{{item.role}}</td>
+                    <td style='font-size:10px'>{{item.type}}</td>
+                    <td style='font-size:10px'>
+                        <button class="btn btn-sm btn-success btn-icon" ng-click="details(item)">Détails</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

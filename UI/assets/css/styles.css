@@ -1,0 +1,262 @@
+.meeting-table td{
+    height: 25px;
+}
+
+.meeting-table th, td {
+    padding: 5px;
+    padding-left: 10px;
+    text-align: left;
+}
+
+#meeting-info-box {
+    margin-top: 10px;
+}
+#meeting-icon-address, #meeting-icon-time {
+    margin-left: 50px;
+}
+
+.meeting-line-info {
+    height: 30px;
+    margin: 10px;
+}
+
+#meeting-icon-address {
+    content: url("../img/address.svg");
+    height: 30px;
+}
+
+#meeting-icon-time {
+    content: url("../img/time.svg");
+    height: 30px;
+}
+
+#response-box, #my-choice-box {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: auto;
+    text-align: center;
+}
+
+.meeting-icon-text {
+    margin-left: 15px;
+}
+
+.response-button {
+    padding: 5px;
+    margin: 15px;
+    width: 135px;
+    height: 60px;
+}
+
+.meeting-table {
+    width: 100%;
+}
+
+.vote-confirm {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.vote-confirm button {
+    margin-left: 20px;
+}
+
+.basic-box {
+    width: 60%;
+}
+
+/*  ----------------------------------------------  */
+.pretty-table div.table-title {
+  display: block;
+  margin: auto;
+  max-width: 600px;
+  padding:5px;
+  width: 100%;
+}
+
+/*** Table Styles **/
+
+.pretty-table .table-fill {
+  background: white;
+  border-radius:3px;
+  border-collapse: collapse;
+  margin: auto;
+  /* padding:5px; */
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
+}
+ 
+.pretty-table th {
+  color:#D5DDE5;;
+  background:#34495E;
+  border-bottom:4px solid #9ea7af;
+  border-right: 1px solid #343a45;
+  font-weight: 100;
+  padding:10px;
+  text-align:left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align:middle;
+}
+
+.pretty-table th:first-child {
+  border-top-left-radius:3px;
+}
+ 
+.pretty-table th:last-child {
+  border-top-right-radius:3px;
+  border-right:none;
+}
+  
+.pretty-table tr {
+  border-top: 1px solid #C1C3D1;
+  border-bottom: 1px solid #C1C3D1;
+  color:#666B85;
+  font-size:16px;
+  font-weight:normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+ 
+.pretty-table tr:hover td {
+  background:#34495E;
+  color:#FFFFFF;
+  /*
+  border-top: 1px solid #22262e;
+  border-bottom: 1px solid #22262e;
+  */
+}
+ 
+.pretty-table tr:first-child {
+  border-top:none;
+}
+
+.pretty-table tr:last-child {
+  border-bottom:none;
+}
+ 
+.pretty-table tr:nth-child(odd) td {
+  background:#EBEBEB;
+}
+ 
+.pretty-table tr:nth-child(odd):hover td {
+  background:#34495E;
+}
+
+.pretty-table tr:last-child td:first-child {
+  border-bottom-left-radius:3px;
+}
+ 
+.pretty-table tr:last-child td:last-child {
+  border-bottom-right-radius:3px;
+}
+ 
+.pretty-table td {
+  background:#FFFFFF;
+  text-align:left;
+  vertical-align:middle;
+  font-weight:300;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #C1C3D1;
+}
+
+.pretty-table td:last-child {
+  border-right: 0px;
+}
+
+.pretty-table th.text-left {
+  text-align: left;
+}
+
+.pretty-table th.text-center {
+  text-align: center;
+}
+
+.pretty-table th.text-right {
+  text-align: right;
+}
+
+.pretty-table td.text-left {
+  text-align: left;
+}
+
+.pretty-table td.text-center {
+  text-align: center;
+}
+
+.pretty-table td.text-right {
+  text-align: right;
+}
+
+#canvas {
+  margin-top:20px;
+  text-align: center;
+}
+
+.mychart {
+  margin: 40px;
+  display: inline-block;
+  color: #66615b;
+  width: 30%;
+}
+
+#login-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#login-content {
+  width: 40%;
+  margin: auto;
+}
+
+#login-button {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.voteTable th {
+  padding: 10px;
+  margin: auto;
+}
+
+#tx-table td{
+  font-size:13px;
+  padding: 5px;
+}
+
+/*
+.menu-item
+{
+  font-size: 12px !important;
+}*/
+
+
+.gradient-thin {
+  color: white  ;
+  background: #272746; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #272746 0%, #29648a 70%, #00acc1 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #272746 0%,#29648a 70%,#00acc1 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #272746 0%,#29648a 70%,#00acc1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#272746', endColorstr='#00acc1',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.inactive-menu a
+{
+  color: white !important ; 
+  font-size: 10px;
+  text-transform: none ;
+}
+
+.inactive-menu p
+{
+  color: white !important ; 
+  font-size: 10px;
+  text-transform: none ;
+}
+
+.inactive-menu li
+{
+  color: white !important ; 
+  font-size: 10px;
+  text-transform: none ;
+}

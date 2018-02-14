@@ -1,0 +1,605 @@
+Wed, 14 Feb 2018 22:20:37 GMT body-parser deprecated bodyParser: use individual json/urlencoded middlewares at serverAuto.js:4:9
+Wed, 14 Feb 2018 22:20:37 GMT body-parser deprecated undefined extended: provide extended option at node_modules/body-parser/index.js:105:29
+starting web server
+Loaded  1  credentials
+AutoServer running at http://:::8084
+AuthAdmin
+Received auth request from admin
+[32minfo[39m: [EventHub.js]: _connect - options {"request-timeout":300000}
+Get askSellCar
+Get Cars
+Ask Sell length : 0
+Ask sell result: []
+calling createAndImportIdCard...
+creating and importing card for Renault
+userID = Renault
+userSecret = frUCcRGktHQc
+calling createAndImportIdCard...
+creating and importing card for bob
+userID = bob
+userSecret = CbvKZEfyMIzP
+calling createAndImportIdCard...
+creating and importing card for Citroen
+userID = Citroen
+userSecret = nDWcaEHgErmu
+calling createAndImportIdCard...
+creating and importing card for alice
+userID = alice
+userSecret = jJZHZUGKESXf
+stdout: 
+Successfully created business network card file to 
+	Output file: Renault@autobkc.card
+
+Command succeeded
+
+
+Successfully imported business network card
+	Card file: Renault@autobkc.card
+	Card name: Renault
+
+Command succeeded
+
+
+stderr: 
+stdout: 
+Successfully created business network card file to 
+	Output file: alice@autobkc.card
+
+Command succeeded
+
+
+Successfully imported business network card
+	Card file: alice@autobkc.card
+	Card name: alice
+
+Command succeeded
+
+
+stderr: 
+stdout: 
+Successfully created business network card file to 
+	Output file: Citroen@autobkc.card
+
+Command succeeded
+
+
+Successfully imported business network card
+	Card file: Citroen@autobkc.card
+	Card name: Citroen
+
+Command succeeded
+
+
+stderr: 
+stdout: 
+Successfully created business network card file to 
+	Output file: bob@autobkc.card
+
+Command succeeded
+
+
+Successfully imported business network card
+	Card file: bob@autobkc.card
+	Card name: bob
+
+Command succeeded
+
+
+stderr: 
+Received auth request from Renault
+[32minfo[39m: [EventHub.js]: _connect - options {"request-timeout":300000}
+[31merror[39m: [client-utils.js]: sendPeersProposal - Promise is rejected: Error: chaincode error (status: 500, message: Error: The current identity, with the name 'Renault' and the identifier 'dd7adbb0d024deab7cfda4d0450c7b7b57ad29dc65a8a4c59b7b5d83de19a24c', must be activated (ACTIVATION_REQUIRED))
+    at /home/genesis/apps/server/node_modules/grpc/src/node/src/client.js:554:15
+participant = org.corentin.autobkc.participants.Seller#Renault
+FQN org.corentin.autobkc.participants.Seller#Renault
+Registry :  org.corentin.autobkc.participants.Seller Seller
+ID :  Renault
+exist :  true
+retParticipant { ownerId: 'Renault', role: 'Seller' }
+Get askSellCar
+Get Cars
+Ask Sell length : 0
+Ask sell result: []
+get history ValidatedResource {
+  '$modelManager': 
+   ModelManager {
+     modelFiles: 
+      { 'org.hyperledger.composer.system': [Object],
+        'org.corentin.autobkc.assets': [Object],
+        'org.corentin.autobkc.participants': [Object],
+        'org.corentin.autobkc.transactions': [Object] } },
+  '$classDeclaration': 
+   ParticipantDeclaration {
+     ast: 
+      { type: 'ParticipantDeclaration',
+        id: [Object],
+        classExtension: [Object],
+        idField: null,
+        body: [Object],
+        abstract: null,
+        decorators: [],
+        location: [Object] },
+     modelFile: 
+      ModelFile {
+        modelManager: [Object],
+        declarations: [Array],
+        imports: [Array],
+        fileName: 'models/org.corentin.autobkc.participants.cto',
+        definitions: '/*********************************************************** */\n/**                    PARTICIPANTS                          */\n/*********************************************************** */\n// Corentin PACAUD\n\nnamespace org.corentin.autobkc.participants\n\nabstract participant Owner identified by ownerId {\n  o String ownerId\n}\n\nparticipant Seller extends Owner{\n  o String companyName\n}\n\nparticipant Buyer extends Owner {\n  o String firstname\n  o String lastname\n}',
+        ast: [Object],
+        namespace: 'org.corentin.autobkc.participants',
+        systemModelFile: false },
+     decorators: [],
+     name: 'Seller',
+     properties: [ [Object] ],
+     superType: 'Owner',
+     superTypeDeclaration: 
+      ParticipantDeclaration {
+        ast: [Object],
+        modelFile: [Object],
+        decorators: [],
+        name: 'Owner',
+        properties: [Array],
+        superType: 'Participant',
+        superTypeDeclaration: [Object],
+        idField: 'ownerId',
+        abstract: true,
+        fqn: 'org.corentin.autobkc.participants.Owner' },
+     idField: null,
+     abstract: false,
+     fqn: 'org.corentin.autobkc.participants.Seller' },
+  '$namespace': 'org.corentin.autobkc.participants',
+  '$type': 'Seller',
+  '$identifier': 'Renault',
+  '$validator': ResourceValidator { options: {} },
+  ownerId: 'Renault',
+  companyName: 'Renault Inc.',
+  role: 'Seller' } 8d7bb03d-e496-7283-aa84-a07664ff8794
+Res :  5
+Get askSellCar
+Get Cars
+Ask Sell length : 0
+Ask sell result: []
+buildCar
+params :  { brand: 'Renault', model: 'Modus' }
+Create car  ValidatedResource {
+  '$modelManager': 
+   ModelManager {
+     modelFiles: 
+      { 'org.hyperledger.composer.system': [Object],
+        'org.corentin.autobkc.assets': [Object],
+        'org.corentin.autobkc.participants': [Object],
+        'org.corentin.autobkc.transactions': [Object] } },
+  '$classDeclaration': 
+   TransactionDeclaration {
+     ast: 
+      { type: 'TransactionDeclaration',
+        id: [Object],
+        classExtension: null,
+        body: [Object],
+        idField: null,
+        abstract: null,
+        decorators: [],
+        location: [Object] },
+     modelFile: 
+      ModelFile {
+        modelManager: [Object],
+        declarations: [Array],
+        imports: [Array],
+        fileName: 'models/org.corentin.autobkc.transactions.cto',
+        definitions: '/*********************************************************** */\n/**                     TRANSACTIONS                         */\n/*********************************************************** */\n// Corentin PACAUD\n\nnamespace org.corentin.autobkc.transactions\n\n\nimport org.corentin.autobkc.participants.*\nimport org.corentin.autobkc.assets.Car\n\ntransaction BuildCarTransaction{\n  o String brand\n  o String model\n}\n\ntransaction SaleTransaction {\n  o String carId\n  o Integer price\n}\n\ntransaction AcceptSaleTransaction {\n  o String saleId\n}',
+        ast: [Object],
+        namespace: 'org.corentin.autobkc.transactions',
+        systemModelFile: false },
+     decorators: [],
+     name: 'BuildCarTransaction',
+     properties: [ [Object], [Object] ],
+     superType: 'Transaction',
+     superTypeDeclaration: 
+      TransactionDeclaration {
+        ast: [Object],
+        modelFile: [Object],
+        decorators: [],
+        name: 'Transaction',
+        properties: [Array],
+        superType: null,
+        superTypeDeclaration: null,
+        idField: 'transactionId',
+        abstract: true,
+        fqn: 'org.hyperledger.composer.system.Transaction' },
+     idField: null,
+     abstract: false,
+     fqn: 'org.corentin.autobkc.transactions.BuildCarTransaction' },
+  '$namespace': 'org.corentin.autobkc.transactions',
+  '$type': 'BuildCarTransaction',
+  '$identifier': 'aae8a71f-3ec2-459f-bbdf-02051fabfbd2',
+  '$validator': ResourceValidator { options: {} },
+  transactionId: 'aae8a71f-3ec2-459f-bbdf-02051fabfbd2',
+  timestamp: 2018-02-14T22:21:40.229Z,
+  brand: 'Renault',
+  model: 'Modus' }
+Create car Result :  undefined
+Get Cars
+get history ValidatedResource {
+  '$modelManager': 
+   ModelManager {
+     modelFiles: 
+      { 'org.hyperledger.composer.system': [Object],
+        'org.corentin.autobkc.assets': [Object],
+        'org.corentin.autobkc.participants': [Object],
+        'org.corentin.autobkc.transactions': [Object] } },
+  '$classDeclaration': 
+   ParticipantDeclaration {
+     ast: 
+      { type: 'ParticipantDeclaration',
+        id: [Object],
+        classExtension: [Object],
+        idField: null,
+        body: [Object],
+        abstract: null,
+        decorators: [],
+        location: [Object] },
+     modelFile: 
+      ModelFile {
+        modelManager: [Object],
+        declarations: [Array],
+        imports: [Array],
+        fileName: 'models/org.corentin.autobkc.participants.cto',
+        definitions: '/*********************************************************** */\n/**                    PARTICIPANTS                          */\n/*********************************************************** */\n// Corentin PACAUD\n\nnamespace org.corentin.autobkc.participants\n\nabstract participant Owner identified by ownerId {\n  o String ownerId\n}\n\nparticipant Seller extends Owner{\n  o String companyName\n}\n\nparticipant Buyer extends Owner {\n  o String firstname\n  o String lastname\n}',
+        ast: [Object],
+        namespace: 'org.corentin.autobkc.participants',
+        systemModelFile: false },
+     decorators: [],
+     name: 'Seller',
+     properties: [ [Object] ],
+     superType: 'Owner',
+     superTypeDeclaration: 
+      ParticipantDeclaration {
+        ast: [Object],
+        modelFile: [Object],
+        decorators: [],
+        name: 'Owner',
+        properties: [Array],
+        superType: 'Participant',
+        superTypeDeclaration: [Object],
+        idField: 'ownerId',
+        abstract: true,
+        fqn: 'org.corentin.autobkc.participants.Owner' },
+     idField: null,
+     abstract: false,
+     fqn: 'org.corentin.autobkc.participants.Seller' },
+  '$namespace': 'org.corentin.autobkc.participants',
+  '$type': 'Seller',
+  '$identifier': 'Renault',
+  '$validator': ResourceValidator { options: {} },
+  ownerId: 'Renault',
+  companyName: 'Renault Inc.',
+  role: 'Seller' } 8d7bb03d-e496-7283-aa84-a07664ff8794
+Res :  6
+P :  Renault
+Get askSellCar
+Get Cars
+Ask Sell length : 0
+Ask sell result: []
+buildCar
+params :  { brand: 'Renault', model: 'Scenic' }
+Create car  ValidatedResource {
+  '$modelManager': 
+   ModelManager {
+     modelFiles: 
+      { 'org.hyperledger.composer.system': [Object],
+        'org.corentin.autobkc.assets': [Object],
+        'org.corentin.autobkc.participants': [Object],
+        'org.corentin.autobkc.transactions': [Object] } },
+  '$classDeclaration': 
+   TransactionDeclaration {
+     ast: 
+      { type: 'TransactionDeclaration',
+        id: [Object],
+        classExtension: null,
+        body: [Object],
+        idField: null,
+        abstract: null,
+        decorators: [],
+        location: [Object] },
+     modelFile: 
+      ModelFile {
+        modelManager: [Object],
+        declarations: [Array],
+        imports: [Array],
+        fileName: 'models/org.corentin.autobkc.transactions.cto',
+        definitions: '/*********************************************************** */\n/**                     TRANSACTIONS                         */\n/*********************************************************** */\n// Corentin PACAUD\n\nnamespace org.corentin.autobkc.transactions\n\n\nimport org.corentin.autobkc.participants.*\nimport org.corentin.autobkc.assets.Car\n\ntransaction BuildCarTransaction{\n  o String brand\n  o String model\n}\n\ntransaction SaleTransaction {\n  o String carId\n  o Integer price\n}\n\ntransaction AcceptSaleTransaction {\n  o String saleId\n}',
+        ast: [Object],
+        namespace: 'org.corentin.autobkc.transactions',
+        systemModelFile: false },
+     decorators: [],
+     name: 'BuildCarTransaction',
+     properties: [ [Object], [Object] ],
+     superType: 'Transaction',
+     superTypeDeclaration: 
+      TransactionDeclaration {
+        ast: [Object],
+        modelFile: [Object],
+        decorators: [],
+        name: 'Transaction',
+        properties: [Array],
+        superType: null,
+        superTypeDeclaration: null,
+        idField: 'transactionId',
+        abstract: true,
+        fqn: 'org.hyperledger.composer.system.Transaction' },
+     idField: null,
+     abstract: false,
+     fqn: 'org.corentin.autobkc.transactions.BuildCarTransaction' },
+  '$namespace': 'org.corentin.autobkc.transactions',
+  '$type': 'BuildCarTransaction',
+  '$identifier': '374dbb67-8eb4-4ff0-8ff1-69ee6a17fce9',
+  '$validator': ResourceValidator { options: {} },
+  transactionId: '374dbb67-8eb4-4ff0-8ff1-69ee6a17fce9',
+  timestamp: 2018-02-14T22:22:03.946Z,
+  brand: 'Renault',
+  model: 'Scenic' }
+Create car Result :  undefined
+Get Cars
+get history ValidatedResource {
+  '$modelManager': 
+   ModelManager {
+     modelFiles: 
+      { 'org.hyperledger.composer.system': [Object],
+        'org.corentin.autobkc.assets': [Object],
+        'org.corentin.autobkc.participants': [Object],
+        'org.corentin.autobkc.transactions': [Object] } },
+  '$classDeclaration': 
+   ParticipantDeclaration {
+     ast: 
+      { type: 'ParticipantDeclaration',
+        id: [Object],
+        classExtension: [Object],
+        idField: null,
+        body: [Object],
+        abstract: null,
+        decorators: [],
+        location: [Object] },
+     modelFile: 
+      ModelFile {
+        modelManager: [Object],
+        declarations: [Array],
+        imports: [Array],
+        fileName: 'models/org.corentin.autobkc.participants.cto',
+        definitions: '/*********************************************************** */\n/**                    PARTICIPANTS                          */\n/*********************************************************** */\n// Corentin PACAUD\n\nnamespace org.corentin.autobkc.participants\n\nabstract participant Owner identified by ownerId {\n  o String ownerId\n}\n\nparticipant Seller extends Owner{\n  o String companyName\n}\n\nparticipant Buyer extends Owner {\n  o String firstname\n  o String lastname\n}',
+        ast: [Object],
+        namespace: 'org.corentin.autobkc.participants',
+        systemModelFile: false },
+     decorators: [],
+     name: 'Seller',
+     properties: [ [Object] ],
+     superType: 'Owner',
+     superTypeDeclaration: 
+      ParticipantDeclaration {
+        ast: [Object],
+        modelFile: [Object],
+        decorators: [],
+        name: 'Owner',
+        properties: [Array],
+        superType: 'Participant',
+        superTypeDeclaration: [Object],
+        idField: 'ownerId',
+        abstract: true,
+        fqn: 'org.corentin.autobkc.participants.Owner' },
+     idField: null,
+     abstract: false,
+     fqn: 'org.corentin.autobkc.participants.Seller' },
+  '$namespace': 'org.corentin.autobkc.participants',
+  '$type': 'Seller',
+  '$identifier': 'Renault',
+  '$validator': ResourceValidator { options: {} },
+  ownerId: 'Renault',
+  companyName: 'Renault Inc.',
+  role: 'Seller' } 8d7bb03d-e496-7283-aa84-a07664ff8794
+Res :  7
+P :  Renault
+P :  Renault
+get history ValidatedResource {
+  '$modelManager': 
+   ModelManager {
+     modelFiles: 
+      { 'org.hyperledger.composer.system': [Object],
+        'org.corentin.autobkc.assets': [Object],
+        'org.corentin.autobkc.participants': [Object],
+        'org.corentin.autobkc.transactions': [Object] } },
+  '$classDeclaration': 
+   ParticipantDeclaration {
+     ast: 
+      { type: 'ParticipantDeclaration',
+        id: [Object],
+        classExtension: [Object],
+        idField: null,
+        body: [Object],
+        abstract: null,
+        decorators: [],
+        location: [Object] },
+     modelFile: 
+      ModelFile {
+        modelManager: [Object],
+        declarations: [Array],
+        imports: [Array],
+        fileName: 'models/org.corentin.autobkc.participants.cto',
+        definitions: '/*********************************************************** */\n/**                    PARTICIPANTS                          */\n/*********************************************************** */\n// Corentin PACAUD\n\nnamespace org.corentin.autobkc.participants\n\nabstract participant Owner identified by ownerId {\n  o String ownerId\n}\n\nparticipant Seller extends Owner{\n  o String companyName\n}\n\nparticipant Buyer extends Owner {\n  o String firstname\n  o String lastname\n}',
+        ast: [Object],
+        namespace: 'org.corentin.autobkc.participants',
+        systemModelFile: false },
+     decorators: [],
+     name: 'Seller',
+     properties: [ [Object] ],
+     superType: 'Owner',
+     superTypeDeclaration: 
+      ParticipantDeclaration {
+        ast: [Object],
+        modelFile: [Object],
+        decorators: [],
+        name: 'Owner',
+        properties: [Array],
+        superType: 'Participant',
+        superTypeDeclaration: [Object],
+        idField: 'ownerId',
+        abstract: true,
+        fqn: 'org.corentin.autobkc.participants.Owner' },
+     idField: null,
+     abstract: false,
+     fqn: 'org.corentin.autobkc.participants.Seller' },
+  '$namespace': 'org.corentin.autobkc.participants',
+  '$type': 'Seller',
+  '$identifier': 'Renault',
+  '$validator': ResourceValidator { options: {} },
+  ownerId: 'Renault',
+  companyName: 'Renault Inc.',
+  role: 'Seller' } 8d7bb03d-e496-7283-aa84-a07664ff8794
+Received auth request from alice
+[32minfo[39m: [EventHub.js]: _connect - options {"request-timeout":300000}
+[31merror[39m: [client-utils.js]: sendPeersProposal - Promise is rejected: Error: chaincode error (status: 500, message: Error: The current identity, with the name 'alice' and the identifier '45267ec4b6a5b22ca34d5c571a99283676d9a3317b280317816dedb6575bbca3', must be activated (ACTIVATION_REQUIRED))
+    at /home/genesis/apps/server/node_modules/grpc/src/node/src/client.js:554:15
+participant = org.corentin.autobkc.participants.Buyer#alice
+FQN org.corentin.autobkc.participants.Buyer#alice
+Registry :  org.corentin.autobkc.participants.Buyer Buyer
+ID :  alice
+exist :  true
+retParticipant { ownerId: 'alice', role: 'Buyer' }
+Get askSellCar
+Get Cars
+Ask Sell length : 0
+Ask sell result: []
+SellCar
+params :  { carId: '75069718' }
+Transaction id :  f0eb6ef4-f191-4be9-882c-22f2d04ca074
+Create SellCar
+Create sellCar Result :  undefined
+Get Cars
+Get askSellCar
+Ask Sell length : 1
+Ask sell result: [ { car: { carId: '75069718', brand: 'Renault', model: 'Scenic' },
+    price: 10000,
+    status: 'inprogress',
+    saleId: '88629939' } ]
+Get askSellCar
+Get Cars
+Ask Sell length : 1
+Ask sell result: [ { car: { carId: '75069718', brand: 'Renault', model: 'Scenic' },
+    price: 10000,
+    status: 'inprogress',
+    saleId: '88629939' } ]
+get history ValidatedResource {
+  '$modelManager': 
+   ModelManager {
+     modelFiles: 
+      { 'org.hyperledger.composer.system': [Object],
+        'org.corentin.autobkc.assets': [Object],
+        'org.corentin.autobkc.participants': [Object],
+        'org.corentin.autobkc.transactions': [Object] } },
+  '$classDeclaration': 
+   ParticipantDeclaration {
+     ast: 
+      { type: 'ParticipantDeclaration',
+        id: [Object],
+        classExtension: [Object],
+        idField: null,
+        body: [Object],
+        abstract: null,
+        decorators: [],
+        location: [Object] },
+     modelFile: 
+      ModelFile {
+        modelManager: [Object],
+        declarations: [Array],
+        imports: [Array],
+        fileName: 'models/org.corentin.autobkc.participants.cto',
+        definitions: '/*********************************************************** */\n/**                    PARTICIPANTS                          */\n/*********************************************************** */\n// Corentin PACAUD\n\nnamespace org.corentin.autobkc.participants\n\nabstract participant Owner identified by ownerId {\n  o String ownerId\n}\n\nparticipant Seller extends Owner{\n  o String companyName\n}\n\nparticipant Buyer extends Owner {\n  o String firstname\n  o String lastname\n}',
+        ast: [Object],
+        namespace: 'org.corentin.autobkc.participants',
+        systemModelFile: false },
+     decorators: [],
+     name: 'Seller',
+     properties: [ [Object] ],
+     superType: 'Owner',
+     superTypeDeclaration: 
+      ParticipantDeclaration {
+        ast: [Object],
+        modelFile: [Object],
+        decorators: [],
+        name: 'Owner',
+        properties: [Array],
+        superType: 'Participant',
+        superTypeDeclaration: [Object],
+        idField: 'ownerId',
+        abstract: true,
+        fqn: 'org.corentin.autobkc.participants.Owner' },
+     idField: null,
+     abstract: false,
+     fqn: 'org.corentin.autobkc.participants.Seller' },
+  '$namespace': 'org.corentin.autobkc.participants',
+  '$type': 'Seller',
+  '$identifier': 'Renault',
+  '$validator': ResourceValidator { options: {} },
+  ownerId: 'Renault',
+  companyName: 'Renault Inc.',
+  role: 'Seller' } 8d7bb03d-e496-7283-aa84-a07664ff8794
+Res :  8
+P :  Renault
+P :  Renault
+get history ValidatedResource {
+  '$modelManager': 
+   ModelManager {
+     modelFiles: 
+      { 'org.hyperledger.composer.system': [Object],
+        'org.corentin.autobkc.assets': [Object],
+        'org.corentin.autobkc.participants': [Object],
+        'org.corentin.autobkc.transactions': [Object] } },
+  '$classDeclaration': 
+   ParticipantDeclaration {
+     ast: 
+      { type: 'ParticipantDeclaration',
+        id: [Object],
+        classExtension: [Object],
+        idField: null,
+        body: [Object],
+        abstract: null,
+        decorators: [],
+        location: [Object] },
+     modelFile: 
+      ModelFile {
+        modelManager: [Object],
+        declarations: [Array],
+        imports: [Array],
+        fileName: 'models/org.corentin.autobkc.participants.cto',
+        definitions: '/*********************************************************** */\n/**                    PARTICIPANTS                          */\n/*********************************************************** */\n// Corentin PACAUD\n\nnamespace org.corentin.autobkc.participants\n\nabstract participant Owner identified by ownerId {\n  o String ownerId\n}\n\nparticipant Seller extends Owner{\n  o String companyName\n}\n\nparticipant Buyer extends Owner {\n  o String firstname\n  o String lastname\n}',
+        ast: [Object],
+        namespace: 'org.corentin.autobkc.participants',
+        systemModelFile: false },
+     decorators: [],
+     name: 'Buyer',
+     properties: [ [Object], [Object] ],
+     superType: 'Owner',
+     superTypeDeclaration: 
+      ParticipantDeclaration {
+        ast: [Object],
+        modelFile: [Object],
+        decorators: [],
+        name: 'Owner',
+        properties: [Array],
+        superType: 'Participant',
+        superTypeDeclaration: [Object],
+        idField: 'ownerId',
+        abstract: true,
+        fqn: 'org.corentin.autobkc.participants.Owner' },
+     idField: null,
+     abstract: false,
+     fqn: 'org.corentin.autobkc.participants.Buyer' },
+  '$namespace': 'org.corentin.autobkc.participants',
+  '$type': 'Buyer',
+  '$identifier': 'alice',
+  '$validator': ResourceValidator { options: {} },
+  ownerId: 'alice',
+  firstname: 'Alice',
+  lastname: 'Jaco',
+  role: 'Buyer' } 8b00ca29-eb37-49dc-d393-06b6f61c921e
+Res :  7
+P :  alice

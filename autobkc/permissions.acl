@@ -1,0 +1,136 @@
+/*********************************************************** */
+/**                         RULES                            */
+/*********************************************************** */
+// Corentin PACAUD
+
+
+rule NetworkAdminUser {
+    description: "Grant business network administrators full access to user resources"
+    participant: "org.hyperledger.composer.system.NetworkAdmin"
+    operation: ALL
+    resource: "**"
+    action: ALLOW
+}
+
+rule NetworkAdminSystem {
+    description: "Grant business network administrators full access to system resources"
+    participant: "org.hyperledger.composer.system.NetworkAdmin"
+    operation: ALL
+    resource: "org.hyperledger.composer.system.**"
+    action: ALLOW
+}
+rule historianAccess{
+  description: "Only allow members to read historian records referencing transactions they submitted."
+  participant(p): "org.corentin.autobkc.participants.*"
+  operation: READ
+  resource(r): "org.hyperledger.composer.system.HistorianRecord"
+  condition: (r.participantInvoking.getIdentifier() != p.getIdentifier())
+  action: DENY
+}
+
+rule SystemACL {
+  description:  "System ACL to permit all access"
+  participant: "org.hyperledger.composer.system.Participant"
+  operation: ALL
+  resource: "org.hyperledger.composer.system.**"
+  action: ALLOW
+}
+rule AllReadParticipantsRegistries {
+  description: "Grant ALL READ access to participant registries"
+  participant: "**"
+  operation: READ
+  resource: "org.corentin.autobkc.participants.**"
+  action: ALLOW
+}
+
+rule BuyerCarReadTransactions{
+  description: "Grant ALL READ access to participant registries"
+  participant: "org.corentin.autobkc.participants.Buyer"
+  operation: READ
+  resource: "org.corentin.autobkc.transactions.**"
+  action: ALLOW
+}
+rule SellerCarReadTransactions{
+  description: "Grant ALL READ access to participant registries"
+  participant: "org.corentin.autobkc.participants.Seller"
+  operation: READ
+  resource: "org.corentin.autobkc.transactions.**"
+  action: ALLOW
+}
+
+rule ParticipantCanReadParticipant{
+  description: "AllAccess - grant everything to everybody"
+  participant(p): "org.corentin.autobkc.participants.*"
+  operation: READ
+  resource(r): "org.corentin.autobkc.participants.*"
+  condition:(p.getIdentifier()==r.getIdentifier())
+  action: ALLOW
+}
+
+rule SellerCanReadCreateUpdateCar{
+    description: "Grant business network administrators full access to system resources"
+    participant(p): "org.corentin.autobkc.participants.Seller"
+    operation: ALL
+    resource(r): "org.corentin.autobkc.assets.Car"
+    condition:(p.getIdentifier() == r.owner.getIdentifier())
+    action: ALLOW
+}
+
+
+rule BuyerCanReadCar{
+    description: "Grant business network administrators full access to system resources"
+    participant(p): "org.corentin.autobkc.participants.Buyer"
+    operation: READ
+    resource(r): "org.corentin.autobkc.assets.Car"
+    condition:((p.getIdentifier() == r.owner.getIdentifier()) || (r.owner.getType() == 'Seller'))
+    action: ALLOW
+}
+
+rule SellerCanCreateBuildTransaction{
+  description: "Grant business network administrators full access to system resources"
+    participant: "org.corentin.autobkc.participants.Seller"
+    operation: CREATE
+    resource: "org.corentin.autobkc.transactions.BuildCarTransaction"
+    action: ALLOW
+}
+
+rule BuyerCanCreateSaleTransaction{
+    description: "Grant business network administrators full access to system resources"
+    participant: "org.corentin.autobkc.participants.Buyer"
+    operation: CREATE
+    resource: "org.corentin.autobkc.transactions.SaleTransaction"
+    action: ALLOW
+}
+
+rule SellerCanCreateAcceptSaleTransaction{
+  description: "Grant business network administrators full access to system resources"
+    participant: "org.corentin.autobkc.participants.Seller"
+    operation: ALL
+    resource: "org.corentin.autobkc.transactions.AcceptSaleTransaction"
+    action: ALLOW
+}
+
+rule BuyerCanCreateSale{
+  description: "Grant business network administrators full access to system resources"
+    participant:"org.corentin.autobkc.participants.Buyer"
+    operation: CREATE
+    resource: "org.corentin.autobkc.assets.Sale"
+    action: ALLOW
+}
+rule BuyerCanReadSale{
+  description: "Grant business network administrators full access to system resources"
+    participant(p):"org.corentin.autobkc.participants.Buyer"
+    operation: READ
+    resource(r): "org.corentin.autobkc.assets.Sale"
+    condition:(r.buyer.getIdentifier() == p.getIdentifier())
+    action: ALLOW
+}
+
+rule SellerCanReadUpdateSale{
+  description: "Grant business network administrators full access to system resources"
+    participant(p):"org.corentin.autobkc.participants.Seller"
+    operation: READ,UPDATE
+    resource(r): "org.corentin.autobkc.assets.Sale"
+    condition:(p.getIdentifier() == r.seller.getIdentifier())
+    action: ALLOW
+}

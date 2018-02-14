@@ -1,0 +1,101 @@
+<div ng-controller="CarController">
+
+    <div class="container-fluid">
+        <div class="content">
+            <div class="row">
+                <div class="col-sm-3">
+                    Home > Détail Voiture xxx
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="container-fluid card">
+                <div class="" id="form_description">
+                    <div class="card-block">
+                        <h5 class="card-title">Description</h5>
+                        <form>
+                            <div class="col-sm-4">
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        N° voiture
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <input disabled class="" type="text" id="num_car" ng-model="car.num" placeholder="Auto-généré" />
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        Acheteur</div>
+                                    <div class="col-sm-7">
+                                        <select id="selSender" class="col-sm-8" ng-disabled="carid !== ''" ng-model="car.to">
+                                        </select>
+                                        <!-- <input type="text" id="address" placeholder="Addresse" disabled value="{{car.to.address}}" />
+                                        <input type="text" id="zipCodeIssuer" placeholder="Code postal" disabled value="{{car.to.zipCode}}" />
+                                        <input type="text" id="cityIssuer" placeholder="Ville" disabled value="{{car.to.city}}" />
+                                        <input type="text" id="countryIssuer" placeholder="Pays" disabled value="{{car.to.country}}" /> -->
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <span/>
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <input type="text" id="address" placeholder="Addresse" disabled value="{{car.to.address}}" />
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <span/>
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <input type="text" id="zipCodeIssuer" placeholder="Code postal" disabled value="{{car.to.zipCode}}" />
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <span/>
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <input type="text" id="cityIssuer" placeholder="Ville" disabled value="{{car.to.city}}" />
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <span/>
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <input type="text" id="countryIssuer" placeholder="Pays" disabled value="{{car.to.country}}" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        Code Acheteur</div>
+                                    <div class="col-sm-7">
+                                        <input type="text" disabled id="code_sender" value="{{car.to.senderCode}}">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col-sm-6" ng-show="carid == ''">
+            <button class="btn btn-fill btn-success" ng-disabled="!isValid()" ng-click="createCar()">Créer</button>
+        </div>
+        <!-- <div class="col-sm-6" ng-show="carid == ''">
+            <button class="btn btn-fill btn-success" ng-click="testFnct()">Test</button>
+        </div> -->
+    </div>
+</div>

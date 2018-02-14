@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Voiture - Acheteur</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap core CSS     -->
+    <link href="../paper-dashboard/assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
+    <link href="../paper-dashboard/assets/css/animate.min.css" rel="stylesheet" />
+
+    <!--  Paper Dashboard core CSS    -->
+    <link href="../paper-dashboard/assets/css/paper-dashboard.css" rel="stylesheet" />
+    <link href="../paper-dashboard/assets/css/themify-icons.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar" data-background-color="white" data-active-color="primary">
+            <div class="sidebar-wrapper">
+                <ul class="nav">
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="ti-panel"></i>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a>
+                            <i class="ti-user"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="DashBoard2.html">
+                            <i class="ti-notepad"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-panel">
+            <div class="content">
+                <h1>Voiture - Vendeur</h1>
+                <div class="container-fluid">
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                Home > Détail voiture xxx
+                            </div>
+                            <div class="form col-sm-4">
+                                <div class="row form-group">
+                                    <div class="col-sm-8 text-center">
+                                        <select class="form-control" id="sel1">
+                                            <option disabled selected>Type d'opération</option>
+                                            <option>1 blop</option>
+                                            <option>2 blop</option>
+                                            <option>3 blop</option>
+                                            <option>4 blop</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="container-fluid card">
+                            <div class="" id="form_description">
+                                <div class="card-block">
+                                    <h5 class="card-title">Description</h5>
+                                    <form>
+                                        <div class="col-sm-4">
+                                            <div class="row">
+                                                <div class="col-sm-5">
+                                                    N° voiture
+                                                </div>
+                                                <div class="col-sm-7">
+                                                    <input class="" type="text" id="num_car" />
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-5">
+                                                    Emetteur</div>
+                                                <div class="col-sm-7">
+                                                    <input type="text" id="name" placeholder="Name" />
+                                                    <input type="text" id="address" placeholder="Address" />
+                                                    <input type="text" id="address2" placeholder="Address..." />
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-5">
+                                                    Code Emetteur</div>
+                                                <div class="col-sm-7">
+                                                    <input type="text" id="code_sender">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-5">
+                                                    Code TCC entrant</div>
+                                                <div class="col-sm-7">
+                                                    <input type="text" id="code_TCC">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-4">
+                                            <div class="row">
+                                                <div class="col-sm-5">
+                                                    Identification titulaire
+                                                </div>
+                                                <div class="col-sm-7">
+                                                    <input type="text" id="id_tit" />
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-5">
+                                                    Code qualité
+                                                </div>
+                                                <div class="col-sm-7">
+                                                    <select id="sel2">
+                                                        <option>MR</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-5">
+                                                    Nom titulaire
+                                                </div>
+                                                <div class="col-sm-7">
+                                                    <input type="text" id="name_tit" />
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-5">
+                                                    Prénom titulaire
+                                                </div>
+                                                <div class="col-sm-7">
+                                                    <input type="text" id="firstname_tit" />
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-5">
+                                                    Adresse
+                                                </div>
+                                                <div class="col-sm-7">
+                                                    <input type="text" id="address_tit" />
+                                                    <input type="text" id="address2_tit" />
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-5">
+                                                    Représenté par</div>
+                                                <div class="col-sm-7">
+                                                    <input type="text" id="represented_by" />
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-5">
+                                                    IBAN
+                                                </div>
+                                                <div class="col-sm-7">
+                                                    <input type="text" id="iban" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="row">
+                                                <div class="col-sm-5">Nature de l'instrument</div>
+                                                <div class="col-sm-7">
+                                                    <select class="col-sm-5" id="sel2">
+                                                        <option>MR</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-5">
+                                                    Code de la valeur
+                                                </div>
+                                                <div class="col-sm-7">
+                                                    <input type="text" id="code_value" />
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-5">
+                                                    Année d'acquisition</div>
+                                                <div class="col-sm-7">
+                                                    <input type="number" min="1900" max="2017" step="1" value="2016" />
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-5">PEA PME</div>
+                                                <div class="col-sm-7">
+                                                    <select id="sel2">
+                                                        <option value="" disabled selected>OUI / NON</option>
+                                                        <option>OUI</option>
+                                                        <option>NON</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button class="btn btn-default col-md-1 col-md-push-10">Retour</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+    crossorigin="anonymous"></script>
+<link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet">
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="../js/descriptionCar.js"></script>
+
+<link href="../css/description_car.css" rel="stylesheet">
+
+</html>

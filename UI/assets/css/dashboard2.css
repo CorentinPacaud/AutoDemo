@@ -1,0 +1,23 @@
+
+.main-panel > .content {
+    padding: 15px 15px;
+}
+.sidebar{
+    width: 80px;
+}
+
+.sidebar-wrapper{
+    width: 100%
+}
+
+.main-panel{
+    width: calc(100% - 80px);
+}
+
+.icon-medium{
+    font-size: 2em
+}
+
+.table > thead > tr > th{
+    font-size: 1em;
+}
