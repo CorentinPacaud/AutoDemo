@@ -1,6 +1,11 @@
 # AutoDemo
 Auto : Démo de Hyperledger
 
+## Prérequis
+
+Vous devez avoir installé hyperledger et ses dépendances notamment via le script ./prereqs-ubuntu.sh
+Lien d'installation : https://hyperledger.github.io/composer/installing/installing-index.html
+
 ## Pour lancer le programme : 
 
 Dans le dossier fabric-tools :
