@@ -30,5 +30,6 @@ Dans le dossier fabric-tools :
 - lancer le script : teardownAll.sh.
 
 Dans le dossier AutoDemo/server :
+- supprimer tous les fichiers en ".card"
 - éditer le fichier creds.json pour ne laisser que le premier login   admin/adminpw
 - tuer le server node.
